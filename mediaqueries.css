@@ -6,3 +6,20 @@
       display: flex;
     }
   }
+  body {
+    text-align: center;
+  }
+  
+  section {
+    margin: 50px auto;
+    max-width: 600px;
+    /* All sections are hidden unless selected. */
+    display: none; 
+  }
+  
+  section img {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
+  }
+  

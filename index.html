@@ -6,35 +6,92 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
+  <style>
+    body {
+      text-align: center;
+    }
+/*The headshot is hardcoded in and then hidden (via code in the script file) whenever the menu is interacted with.*/
+    #headshot {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 20px;
+    }
+
+    #footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      /*I chose a darker white so the footer sticks out a little bit. */
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+
+  </style>
 </head>
 <body>
   <nav id="desktop-nav">
-    <div class="logo"> Jade Geiselman </div>
+    <div class="logo"> Jade Geiselman's Portfolio </div>
     <div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" onclick="showAboutContent()">About</a></li>
+        <li><a href="#experience" onclick="showExperienceContent()">Experience</a></li>
+        <li><a href="#projects" onclick="showProjectsContent()">Projects</a></li>
       </ul>
     </div>
   </nav>
-  <nav id ="hamburger-nav">
-    <div class="logo"> Jade Geiselman </div>
+  <nav id="hamburger-nav">
+    <div class="logo"> Jade Geiselman's Portfolio </div>
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <div class = "menu-links">
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu(); showAboutContent()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu(); showExperienceContent()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu(); showProjectsContent()">Projects</a></li>
       </div>
     </div>
   </nav>
-  <script src="script.js"></script>
+      <img id="headshot" src="C:\Users\Jade\OneDrive\Documents\portfolio-website-Jade\portfolio-website-fall2023\assets\headshot.jpg" alt="Your Photo">
+    
+  <section id="about-section">
+    <p>Mississippi State University</p>
+    <p>Bachelors of Science in Electrical Engineering</p>
+    <p>Minors in Mathematics</p>
+    <p>Periscope Lab Member</p>
+    <img src="C:/Users/Jade/OneDrive/Documents/portfolio-website-Jade/portfolio-website-fall2023/assets/stockresearchphoto.jpg" alt="Your Photo">
+  </section>
+
+  <section id="experience-section">
+    <h2>Experience</h2><br>
+    <p>
+        Intern at Leidos<br>
+        As an intern at Leidos, I gained valuable experience in the field of electrical engineering. I worked on various projects related to circuit design and testing, helping to develop and implement test procedures for new products.
+        <br><br>
+        Information Assistant<br>
+        In my role as an Information Assistant for Mississippi State University's Housing and Residence Life Department, I was responsible for fielding resident and visitor questions, facilitating package deliveries, and more.
+    </p>   
+    <br>
+     <p>Download my <a href="C:/Users/Jade/OneDrive/Documents/portfolio-website-Jade/portfolio-website-fall2023/assets/resumefall_1.pdf" target="_blank">resume</a>.</p>
+  </section>
+
+  <section id="projects-section">
+    <h2>Projects</h2><br>
+    <p>Honors Senior Thesis<br>
+      I am developing a virtual reality game that involves the use of a joystick to maneuver a sphere through a maze. I plan to test if it improves powered wheelchair operation skills.<br> 
+      <br>Senior Design Project <br>
+      I am working with a team of Electrical and Computer Engineering Seniors at Mississippi State University to develop a wearable glove device that translates ASL movements into audible speech. The device is shown in the image below. <br>
+      <br>
+      <img src="C:/Users/Jade/OneDrive/Documents/portfolio-website-Jade/portfolio-website-fall2023/assets/srdesign.jpg" alt="Your Photo">
+    </p>
+  </section>
+  <div id="footer">
+    <p>Thank you for visiting my website!</p>
+  </div>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
